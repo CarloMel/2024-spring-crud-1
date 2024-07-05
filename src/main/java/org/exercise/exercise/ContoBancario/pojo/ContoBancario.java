@@ -47,6 +47,6 @@ public class ContoBancario {
     @Override
     public String toString() {
         return "Conto bancario:\n"
-        + "saldo :" + getSaldo();
+        + "saldo : " + getSaldo();
     }
 }
