@@ -31,16 +31,22 @@ public class ExerciseApplication implements CommandLineRunner {
 		ContoBancario c2 = new ContoBancario(250);
 		ContoBancario c3 = new ContoBancario(1600);
 
+		System.out.println("Manual syso");
+
 		System.out.println(c1);
 		System.out.println(c2);
 		System.out.println(c3);
 
-		// Questa linea fa crashare il programma
 		contoBancarioService.save(c1);
 		contoBancarioService.save(c2);
 		contoBancarioService.save(c3);
 
+		contoBancarioService.delete(c2);
+		contoBancarioService.delete(c3);
+
 		System.out.println("==================================================");
+
+		System.out.println("Result with getAllContiBancari() after deleting c2 e c3");
 
 		contoBancarioService.getAllContiBancari()
 							.stream()
@@ -57,11 +63,13 @@ public class ExerciseApplication implements CommandLineRunner {
 		}
 
 		ContoBancario oldCB = oldCBOpt.get();
+		System.out.println("OldCB:");
 		System.out.println(oldCB);
 
 		oldCB.setSaldo(3000);
 
 		contoBancarioService.save(oldCB);
+		System.out.println("OldCB after setSaldo()");
 		System.out.println(oldCB);
 	}
 }
