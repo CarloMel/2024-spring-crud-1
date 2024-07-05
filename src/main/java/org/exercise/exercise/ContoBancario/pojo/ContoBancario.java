@@ -1,4 +1,4 @@
-package org.exercise.exercise.ContoBancario;
+package org.exercise.exercise.ContoBancario.pojo;
 
 public class ContoBancario {
 
