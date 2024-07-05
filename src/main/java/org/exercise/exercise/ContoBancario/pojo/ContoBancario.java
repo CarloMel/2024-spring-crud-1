@@ -14,6 +14,10 @@ public class ContoBancario {
 
     private int saldo;
 
+    public ContoBancario() {
+        
+    }
+
     public ContoBancario (int saldo) {
         setSaldo(saldo);
     }
